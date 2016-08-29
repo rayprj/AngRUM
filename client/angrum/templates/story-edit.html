@@ -1,4 +1,26 @@
 <div class="form-group">
-    <label for="{{field}}">{{viewUtil.title(field)}}</label>
-    <input type="text" class="form-control" id={{field}} ng-model="ang.currentStory[field]" />
+    <div ng-switch="fieldMap[field].type">
+        <label ng-if="fieldMap[field].type!='id'" for="{{field}}">{{viewUtil.title(field)}}</label>
+
+        <input ng-switch-when="text" type="text" class="form-control" id={{field}} ng-model="ang.currentStory[field]" />
+        <input ng-switch-when="number" type="number" class="form-control" id={{field}} ng-model="ang.currentStory[field]" />
+        <input ng-switch-when="date" type="date" class="form-control" id={{field}} ng-model="ang.currentStory[field]" />
+
+        <textarea ng-switch-when="textarea" class="form-control" id={{field}} ng-model="ang.currentStory[field]"></textarea>
+
+        <div ng-switch-when="radio"  class="form-control">
+            <label class="radio-inline" ng-repeat="(value, label) in fieldMap[field].values">
+                <input type="radio" ng-model="ang.currentStory[field]" ng-value="{{value}}" >
+                {{label}}
+            </label> 
+        </div>
+
+
+
+            <select ng-switch-when="select" id={{field}} class="form-control" ng-model="ang.currentStory[field]"
+									ng-options="k as v for (k, v) in fieldMap[field].values"
+									></select>
+
+        
+    </div>
 </div>

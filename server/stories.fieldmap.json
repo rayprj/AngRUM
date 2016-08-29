@@ -1,0 +1,11 @@
+{
+    "_id": {"type":"id"},
+    "isActive": {"type":"radio", "values":{"true":"Active", "false":"InActive" }},
+    "storyPoints": {"type":"number"},
+    "status": {"type":"select", "values": {"new":"New", "approved":"Approved", "inprogress":"In progress"} },
+    "title": {"type": "text"},
+    "descritption": {"type": "textarea"},
+    "tags": {"type": "text"},
+    "relatedStories": {"type":"related", "relatedto": "story"},
+    "dateCreated": {"type":"date"}
+}

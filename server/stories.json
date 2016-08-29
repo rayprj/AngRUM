@@ -1,7 +1,6 @@
 [
   {
     "_id": "57c3d6117241ea4592372cce",
-    "index": 0,
     "isActive": false,
     "storyPoints": 35,
     "status": "approved",
@@ -24,7 +23,6 @@
   },
   {
     "_id": "57c3d61190f0b69c2e0d3e20",
-    "index": 1,
     "isActive": false,
     "storyPoints": 22,
     "status": "new",
@@ -47,7 +45,6 @@
   },
   {
     "_id": "57c3d611d7df782eab7f4fd9",
-    "index": 2,
     "isActive": false,
     "storyPoints": 40,
     "status": "inprogress",

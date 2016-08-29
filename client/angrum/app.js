@@ -2,24 +2,33 @@ var module = angular.module('angrum', []);
 
 module.service('angModel', function($http) {
 
-    this.getStories = function() {
-        return $http({method:'get', url:'server/stories.json'}).then(
+    this.cached = [];
+
+    this.getData = function(url, cached) {
+        
+        if (typeof cached == 'undefined' && typeof cached != 'boolean') {
+            cached = false;
+        }
+        return $http({method:'get', url:url, cache:cached}).then(
             function success(data) {
                 return data;
             }, 
             function error(response) {
                 //return response;
+                //TODO
             }
         );
-    }
+    };
+
 });
 
 
-module.factory('angViewUtil', function() {
+module.factory('angViewUtil', function(angModel) {
     return {
         title: function(title) {
             return title.charAt(0).toUpperCase() + title.slice(1);
         },
+        
     }
 });
 
@@ -56,10 +65,17 @@ module.controller('angCtrl', function($scope, angModel, angViewUtil) {
         $scope[scopeVar] = scopeValue;
     };
 
-    angModel.getStories().then(function(d) {
+    angModel.getData('server/stories.json').then(function(d) {
             ang.stories = d.data;
         }
     );
+
+    $scope.fieldMap = {};
+    angModel.getData('server/stories.fieldmap.json', true).then(function(d) {
+            $scope.fieldMap = d.data;
+        }
+    );
+
     ang.setStory = function(story) {
         ang.currentStory = story;
         ang.setScope('currentView', 'detail');

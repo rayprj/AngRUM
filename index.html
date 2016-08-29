@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="angrum">
+    <head>
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="client/angrum/app.css" />
+        <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="client/angrum/app.js"></script>
+        <title>AngRUM</title>
+    </head>
+
+    <body>
+        <div ng-controller="angCtrl as ang">
+
+            <div class="col-md-3">
+                <div class="panel panel-info">
+                <div class="panel-heading">Stories</div>
+                <div class="panel-body">
+                    <story-sidebar ng-repeat="story in ang.stories" ng-click="ang.setStory(story)"></story-sidebar>
+                </div>
+                </div>
+            </div>
+
+            <div class="col-md-9 content">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Story</div>
+                    <div ng-switch="currentView">
+                        <div ng-switch-when="detail" class="panel-body">
+                            <div><a ng-click="ang.setScope('currentView', 'edit')" class="btn btn-xs btn-primary"><span class="glyphicon glyphicon-pencil"></span> Edit</a></div>
+                            <div><story-detail ng-repeat="(field, value) in ang.currentStory"></story-detail></div>
+                        </div>
+                        <div ng-switch-when="edit" class="panel-body">
+                            <div><a ng-click="ang.setScope('currentView', 'detail')" class="btn btn-xs btn-primary"><span class="glyphicon glyphicon-eye-open"></span> Detail</a></div>
+                            <div><story-edit ng-repeat="(field, value) in ang.currentStory"></story-edit></div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,68 @@
+[
+  {
+    "_id": "57c3d6117241ea4592372cce",
+    "index": 0,
+    "isActive": false,
+    "storyPoints": 35,
+    "status": "approved",
+    "title": "MAGNEMO",
+    "descritption": "Officia aliqua aliqua sunt reprehenderit elit eu elit quis pariatur ipsum commodo dolore reprehenderit nulla. Eiusmod duis nisi cillum consectetur veniam ipsum officia dolor in sint labore nisi. Aute pariatur laboris velit est exercitation sint do est ipsum laborum dolor. Eiusmod mollit id laborum ut non incididunt elit in. Ut cupidatat quis duis nisi duis in in.",
+    "dateCreated": "Saturday, November 29, 2014 2:05 PM",
+    "tags": [
+      "aliquip",
+      "ut",
+      "fugiat",
+      "amet",
+      "aute"
+    ],
+    "relatedStories": [
+      {
+        "id": "57c3d61190f0b69c2e0d3e20",
+        "title": "MICROLUXE"
+      }
+    ]
+  },
+  {
+    "_id": "57c3d61190f0b69c2e0d3e20",
+    "index": 1,
+    "isActive": false,
+    "storyPoints": 22,
+    "status": "new",
+    "title": "MICROLUXE",
+    "descritption": "Quis velit ex quis irure Lorem minim incididunt. Officia sit laborum in dolore excepteur dolor. Ad veniam dolor duis irure pariatur Lorem dolor proident nulla magna. Non magna ullamco qui minim elit Lorem enim. Culpa occaecat elit eiusmod sunt elit consectetur cillum cillum commodo non laborum dolor occaecat in. Officia amet ut veniam eiusmod sint velit culpa officia ullamco ullamco ipsum est.",
+    "dateCreated": "Sunday, April 5, 2015 5:44 PM",
+    "tags": [
+      "eiusmod",
+      "ullamco",
+      "aliquip",
+      "nostrud",
+      "occaecat"
+    ],
+    "relatedStories": [
+        {
+        "id": "57c3d6117241ea4592372cce",
+        "title": "MAGNEMO"
+      }
+    ]
+  },
+  {
+    "_id": "57c3d611d7df782eab7f4fd9",
+    "index": 2,
+    "isActive": false,
+    "storyPoints": 40,
+    "status": "inprogress",
+    "title": "TOURMANIA",
+    "descritption": "Cupidatat nisi adipisicing et excepteur incididunt nostrud ipsum quis laborum esse. Eiusmod aliqua consectetur laborum ea sint tempor amet esse. Ut id laboris laborum excepteur aute esse ut. Eu ex sit labore cillum culpa sit ex sit tempor occaecat. Velit magna ullamco culpa commodo adipisicing quis commodo ipsum duis officia irure sit qui. Nisi est commodo aliquip Lorem aliquip.",
+    "dateCreated": "Thursday, October 16, 2014 3:33 AM",
+    "tags": [
+      "incididunt",
+      "ea",
+      "aliquip",
+      "anim",
+      "Lorem"
+    ],
+    "relatedStories": [
+      
+    ]
+  }
+]
